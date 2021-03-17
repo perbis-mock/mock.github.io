@@ -4387,18 +4387,19 @@ class Tamamla extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         sendParameters
       } = this.state;
       const form = document.createElement('form');
+      form.style.display = 'none';
       const actionUrl = `https://perbis-test.ticaret.gov.tr/api/workflow/external/basvuru/${basvuruId}/devam`;
       form.action = actionUrl;
       form.method = 'post';
       const input = document.createElement('input');
       input.name = 'statusType';
       input.id = 'statusType';
-      input.value = this.state.statusType.toString();
+      input.value = this.state.statusType;
       form.appendChild(input);
       const descriptionInput = document.createElement('input');
       descriptionInput.name = 'description';
       descriptionInput.id = 'description';
-      descriptionInput.value = this.state.statusType.toString();
+      descriptionInput.value = this.state.description.toString();
       form.appendChild(descriptionInput);
 
       if (sendParameters) {
