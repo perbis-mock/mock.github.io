@@ -4411,7 +4411,7 @@ class Tamamla extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       } = this.state;
       const form = document.createElement('form');
       form.style.display = 'none';
-      const actionUrl = `http://localhost:44316/api/workflow/external/basvuru/${basvuruId}/devam`;
+      const actionUrl = `https://perbis-test.ticaret.gov.tr/api/workflow/external/basvuru/${basvuruId}/devam`;
       form.action = actionUrl;
       form.method = 'post';
       const input = document.createElement('input');
@@ -4466,10 +4466,7 @@ class Tamamla extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       name: "statusType",
       id: "statusType",
       className: "form-control",
-      onChange: e => {
-        console.log(e);
-        this.updateState('statusType', e.target.value);
-      }
+      onChange: e => this.updateState('statusType', e.target.value)
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", null), _psc_clients_psc_models__WEBPACK_IMPORTED_MODULE_0__["BasvuruDurumTuruOptions"].filter(x => x.value !== _psc_clients_psc_models__WEBPACK_IMPORTED_MODULE_0__["BasvuruDurumTuru"].WAITING).map(option => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", {
       key: option.value,
       value: option.value
